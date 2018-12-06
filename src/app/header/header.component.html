@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#"><img src="assets/visa.jpg" alt="Logo" height="45"style="margin-left:40px"></a>
+    </a>
+    <button class="navbar-toggler" type="button"(click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse"[ngClass]="{ 'show': navbarOpen }" *ngIf="!navbarOpen">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#">Pay with Visa</a>
+          <span class="caret"></span>
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a href="#">Visa Checkout</a></li>
+            <li class="nav-item"><a href="#">Find a card</a></li>
+            <li class="nav-item"><a href="#">Visa Offers+Perks</a></li>
+            <li class="nav-item"><a href="#">ContactLess Payments</a></li>
+            <li class="nav-item"><a href="#">Payment technology</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link"  href="#">Issue Cards</a>
+            <span class="caret"></span>
+            <ul class="dropdown-menu">
+              <li><a href="#">Visa Ready</a></li>
+              <li><a href="#">Payment technology</a></li>
+              <li><a href="#">Visa Developer</a></li>
+              <li><a href="#">Info for partners</a></li>
+              <li><a href="#">Visa Performance Solutions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Accept payments</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Accept Visa Payments</a></li>
+                <li><a href="#">Small Business tools</a></li>
+                <li><a href="#">Commercial Solutions</a></li>
+                <li><a href="#">Visa direct</a></li>
+              </ul>
+            </li>
+
+
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Travel</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">About Visa</a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#">Visa Blog</a></li>
+                  <li><a href="#">Visa Innovations</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Global impact</a></li>
+                  <li><a href="#">About Visa</a></li>
+                </ul>
+              </li>
+
+
+
+
+      </ul>
+    </div>
+
+  <button style="background-color:#0a0272f1;border:#0a0272f1" (click)="enableSearch()">
+   <i style="font-size:30px;color:#f0ac2f;" class="fa">&#xf002;</i>
+  </button>
+
+  </nav>
+  <div *ngIf="searchEnabled">
+    <div class="form-group">
+      <input type="text" name="query" class="form-control" placeholder="Type in the query ">
+      <button type="submit" class="btn btn-default" (click)="disableSearch()">Go</button>
+    </div>
+    </div>
